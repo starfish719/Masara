@@ -26,6 +26,10 @@ export const Main = () => {
   });
 
   const calcClicked = () => {
+    if (!pokemon) {
+      return false;
+    }
+    
     setCalcResult(
       speedResults({
         pokemon,
