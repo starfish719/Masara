@@ -66,12 +66,12 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        実数値: 100
+                        Actual: 100
                       </p>
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        努力値: 0
+                        Effort: 0
                       </p>
                       <p
                         class="text-sm text-gray-500"
@@ -85,12 +85,12 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        実数値: 101
+                        Actual: 101
                       </p>
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        努力値: 4
+                        Effort: 4
                       </p>
                       <p
                         class="text-sm text-gray-500"
@@ -104,12 +104,12 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        実数値: 102
+                        Actual: 102
                       </p>
                       <p
                         class="text-sm text-gray-500 mb-1"
                       >
-                        努力値: 8
+                        Effort: 8
                       </p>
                       <p
                         class="text-sm text-gray-500"

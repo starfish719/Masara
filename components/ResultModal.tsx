@@ -49,10 +49,10 @@ export const ResultModal = (props: Props) => {
                         className="pt-3 pb-3 border-b-2"
                       >
                         <p className="text-sm text-gray-500 mb-1">
-                          実数値: {result.resultValue}
+                          Actual: {result.resultValue}
                         </p>
                         <p className="text-sm text-gray-500 mb-1">
-                          努力値: {result.effortValue}
+                          Effort: {result.effortValue}
                         </p>
                         <p className="text-sm text-gray-500">
                           {getResultDescription(result.resultValue)}
