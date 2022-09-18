@@ -10,5 +10,5 @@
 ## Commit
 - `npm run commit`
 
-## Acknowledgments
+## Special Thanks
 - [barudoru](https://twitter.com/barudoru) WCS2017 VGC Champion
