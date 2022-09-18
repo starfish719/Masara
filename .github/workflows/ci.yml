@@ -25,9 +25,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ matrix.node }}-npm-${{ hashFiles('**/package-lock.json') }}
-      - uses: nrwl/nx-set-shas@v2
-        with:
-          main-branch-name: ${{ github.base_ref }}
       - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
@@ -36,7 +33,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Lint
-        run: npx nx affected:lint --base=${{ env.NX_BASE }}
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -53,9 +50,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ matrix.node }}-npm-${{ hashFiles('**/package-lock.json') }}
-      - uses: nrwl/nx-set-shas@v2
-        with:
-          main-branch-name: ${{ github.base_ref }}
       - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
@@ -64,7 +58,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Test
-        run: npx nx affected:test --base=${{ env.NX_BASE }}
+        run: npm run test:ci
 
   build:
     runs-on: ubuntu-latest
@@ -81,9 +75,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ matrix.node }}-npm-${{ hashFiles('**/package-lock.json') }}
-      - uses: nrwl/nx-set-shas@v2
-        with:
-          main-branch-name: ${{ github.base_ref }}
       - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
@@ -92,4 +83,4 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Build
-        run: npx nx affected:build --base=${{ env.NX_BASE }}
+        run: npm run build
