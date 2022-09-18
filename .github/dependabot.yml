@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: weekly
+      time: '06:00'
+      timezone: Japan
+    versioning-strategy: widen
+    open-pull-requests-limit: 20
+    labels:
+      - 'Type: Maintenance'
+    commit-message:
+      prefix: 'chore(deps): '
