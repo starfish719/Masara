@@ -7,8 +7,7 @@
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "test:ci:fix": "jest -u --ci",
-    "lint": "",
-    "lint:fix": "",
+    "lint": "next lint",
     "commit": "git-cz"
   },
   "dependencies": {
