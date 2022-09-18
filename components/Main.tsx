@@ -49,7 +49,7 @@ export const Main = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
-                  <div className="flex-shrink-0">Logo Image</div>
+                  <div className="flex-shrink-0"></div>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
                       {navigation.map((item, itemIdx) =>
@@ -110,7 +110,7 @@ export const Main = () => {
 
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Masara</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Speed Checker</h1>
         </div>
       </header>
       <main>
@@ -141,12 +141,12 @@ export const Main = () => {
                         />
                       </div>
 
-                      <div className="col-span-2 sm:col-span-2">
+                      <div className="col-span-5 sm:col-span-5">
                         <label
-                          htmlFor="email-address"
+                          htmlFor="individual_value"
                           className="block text-sm font-medium text-gray-700"
                         >
-                          Individual value
+                          IVs
                         </label>
                         <select
                           id="individual_value"
@@ -166,9 +166,9 @@ export const Main = () => {
                         </select>
                       </div>
 
-                      <div className="col-span-2 sm:col-span-2">
+                      <div className="col-span-5 sm:col-span-5">
                         <label
-                          htmlFor="email-address"
+                          htmlFor="personality"
                           className="block text-sm font-medium text-gray-700"
                         >
                           Personality
@@ -189,9 +189,54 @@ export const Main = () => {
                         </select>
                       </div>
 
-                      <div className="col-span-2 sm:col-span-2">
+                      <div className="col-span-5 sm:col-span-5">
                         <label
-                          htmlFor="email-address"
+                          htmlFor="ability"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Ability
+                        </label>
+                        <select
+                          id="ability"
+                          name="ability"
+                          value={ability}
+                          onChange={(e) =>
+                            setAbility(parseFloat(e.target.value))
+                          }
+                          autoComplete="ability"
+                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        >
+                          <option value={2.0}>2.0</option>
+                          <option value={1.0}>1.0</option>
+                          <option value={0.5}>0.5</option>
+                        </select>
+                      </div>
+
+                      <div className="col-span-5 sm:col-span-5">
+                        <label
+                          htmlFor="item"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Item
+                        </label>
+                        <select
+                          id="item"
+                          name="item"
+                          value={item}
+                          onChange={(e) => setItem(parseFloat(e.target.value))}
+                          autoComplete="item"
+                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        >
+                          <option value={2.0}>2.0</option>
+                          <option value={1.5}>1.5</option>
+                          <option value={1.0}>1.0</option>
+                          <option value={0.5}>0.5</option>
+                        </select>
+                      </div>
+
+                      <div className="col-span-5 sm:col-span-5">
+                        <label
+                          htmlFor="rank"
                           className="block text-sm font-medium text-gray-700"
                         >
                           Rank
@@ -219,100 +264,47 @@ export const Main = () => {
                           <option value={-6}>-6</option>
                         </select>
                       </div>
-
-                      <div className="col-span-2 sm:col-span-2">
+                    </div>
+                    <div className="py-5 grid grid-cols-10 gap-10">
+                      <div className="col-span-5 sm:col-span-5">
+                        <input
+                          id="tailwind"
+                          name="tailwind"
+                          checked={isTailwind}
+                          onChange={() => setIsTailwind(!isTailwind)}
+                          type="checkbox"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
                         <label
-                          htmlFor="email-address"
-                          className="block text-sm font-medium text-gray-700"
+                          htmlFor="tailwind"
+                          className="font-medium text-gray-700"
                         >
-                          Item
+                          Tailwind
                         </label>
-                        <select
-                          id="item"
-                          name="item"
-                          value={item}
-                          onChange={(e) => setItem(parseFloat(e.target.value))}
-                          autoComplete="item"
-                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        >
-                          <option value={2.0}>2.0</option>
-                          <option value={1.5}>1.5</option>
-                          <option value={1.0}>1.0</option>
-                          <option value={0.5}>0.5</option>
-                        </select>
                       </div>
-
-                      <div className="col-span-2 sm:col-span-2">
+                      <div className="col-span-5 sm:col-span-5">
+                        <input
+                          id="paralysis"
+                          name="paralysis"
+                          checked={isParalysis}
+                          onChange={() => setIsParalysis(!isParalysis)}
+                          type="checkbox"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
                         <label
-                          htmlFor="email-address"
-                          className="block text-sm font-medium text-gray-700"
+                          htmlFor="paralysis"
+                          className="font-medium text-gray-700"
                         >
-                          Ability
+                          Paralysis
                         </label>
-                        <select
-                          id="ability"
-                          name="ability"
-                          value={ability}
-                          onChange={(e) =>
-                            setAbility(parseFloat(e.target.value))
-                          }
-                          autoComplete="ability"
-                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        >
-                          <option value={2.0}>2.0</option>
-                          <option value={1.0}>1.0</option>
-                          <option value={0.5}>0.5</option>
-                        </select>
-                      </div>
-
-                      <div className="flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            id="tailwind"
-                            name="tailwind"
-                            checked={isTailwind}
-                            onChange={() => setIsTailwind(!isTailwind)}
-                            type="checkbox"
-                            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="tailwind"
-                            className="font-medium text-gray-700"
-                          >
-                            Tailwind
-                          </label>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            id="paralysis"
-                            name="paralysis"
-                            checked={isParalysis}
-                            onChange={() => setIsParalysis(!isParalysis)}
-                            type="checkbox"
-                            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="paralysis"
-                            className="font-medium text-gray-700"
-                          >
-                            Paralysis
-                          </label>
-                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 bg-gray-50 text-left sm:px-6">
+                  <div className="w-full px-4 py-3 bg-gray-50 text-left sm:px-6">
                     <button
                       type="submit"
                       onClick={calcClicked}
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                       Calc
                     </button>
