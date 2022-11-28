@@ -3,7 +3,7 @@ import { getResultDescription, speedResults, calcSpeed } from './SpeedMaster';
 describe('getResultDescription', () => {
   it('when exists description data, return description', () => {
     expect(getResultDescription(130)).toBe(
-      '最速67族（アーマーガア/ランターン）準速78族（カメックス/ホルード）無振り110族（ゲンガー/ケンタロス/ルギア/ラティアス/ラティオス/ルガルガン黄昏）',
+      '最速67族（アーマーガア）、無振り110族（タギングル）',
     );
   });
 

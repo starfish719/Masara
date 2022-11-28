@@ -76,7 +76,7 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500"
                       >
-                        無振り80族（トゲキッス/フシギバナ/カブトプス/カイリュー/バシャーモ/ダーテング/サーナイト/チルタリス/オニゴーリ/フワライド/マンムー/エルレイド/ムーランド/シャンデラ/バルジーナ/ウォーグル/ヌメルゴン/ナゲツケサル/レジドラゴ/バドレックス）
+                        無振り80族（カイリュー/サーナイト/アメモース/ブーピッグ/チルタリス/エルレイド/ヌメルゴン）
                       </p>
                     </div>
                     <div
@@ -95,7 +95,7 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500"
                       >
-                        最速40族（ヌケニン/ドサイドン）無振り81族（ギャラドス/ミロカロス）
+                        無振り81族（ギャラドス）
                       </p>
                     </div>
                     <div
@@ -114,7 +114,7 @@ exports[`ResultModal when isOpen is true, should render 1`] = `
                       <p
                         class="text-sm text-gray-500"
                       >
-                        準速50族（ラフレシア/ラッキー/キレイハナ/ハピナス/ヤミラミ/ツンベアー/メレシー/バドレックス白）無振り82族（ルガルガン夜）
+                        準速50族（ラッキー/ツンベアー）、無振り82族（シャリタツ）
                       </p>
                     </div>
                   </div>
