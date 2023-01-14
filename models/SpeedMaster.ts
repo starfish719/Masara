@@ -50,8 +50,11 @@ export const calcSpeed = (calcProps: CalcProps) => {
     isParalysis,
   } = calcProps;
 
+  const level: number = 50;
+
   let calcResult = pokemon.baseStats * 2 + individualValue + effortValue / 4;
-  calcResult = Math.floor(((calcResult * 50) / 100 + 5) * personality);
+  calcResult = Math.floor((calcResult * level) / 100 + 5);
+  calcResult = Math.floor(calcResult * personality);
 
   if (rank > 0) {
     calcResult = Math.floor((calcResult * (2 + rank)) / 2);
