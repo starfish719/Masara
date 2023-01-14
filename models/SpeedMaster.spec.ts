@@ -175,6 +175,25 @@ describe('speedResults', () => {
         },
         effortValue: 252,
         individualValue: 31,
+        personality: 1.0,
+        rank: 0,
+        item: 1.0,
+        ability: 1.0,
+        isTailwind: false,
+        isParalysis: false,
+      };
+      expect(calcSpeed(mockCalcProps)).toBe(162);
+    });
+
+    it('return most speed result value', () => {
+      const mockCalcProps = {
+        pokemon: {
+          value: 'hoge',
+          label: 'fuga',
+          baseStats: 110,
+        },
+        effortValue: 252,
+        individualValue: 31,
         personality: 1.1,
         rank: 0,
         item: 1.0,
